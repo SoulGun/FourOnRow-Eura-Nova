@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using MsgPack.Serialization;
+using System.Threading;
 
 namespace reseauxClient
 {
@@ -173,12 +174,8 @@ namespace reseauxClient
                 return serializer.Unpack(byteStream);
             }
         }
-
-        static void Main(string[] args)
+        public static void RecevingData()
         {
-
-
-
             IPAddress ipServeur;
             IPEndPoint ipeServeur;
             TcpClient tc = null;
@@ -216,9 +213,20 @@ namespace reseauxClient
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.ReadKey();
             }
-           
-        
+
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            RecevingData();
+
+
+
+
 
         }
        
