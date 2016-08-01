@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace reseauxClient
 {
-    
+
     public sealed class Board
     {
         public const int BoardRows = 6, BoardColumns = 7;
@@ -18,13 +18,13 @@ namespace reseauxClient
 
         private readonly CellStates[,] cells;
         private readonly int numberOfEmptyCells;
-       
+
         public Board()
         {
             cells = new CellStates[BoardRows, BoardColumns];
             numberOfEmptyCells = BoardRows * BoardColumns;
         }
-       
+
 
         public Board(Board board, int numberOfEmptyCells)
         {
@@ -81,8 +81,8 @@ namespace reseauxClient
 
 
 
-           
-           string reponse = null;
+
+            string reponse = null;
             StreamWriter write = new StreamWriter(ns);
             StreamReader reader = new StreamReader(ns);
             //Console.WriteLine("un string svp");
@@ -98,12 +98,12 @@ namespace reseauxClient
                 reponse = reader.ReadLine();
                 return reponse;
             } while (true);
-            
+
 
         }
-                
-    
-    public CellStates GetCellState(int row, int column)
+
+
+        public CellStates GetCellState(int row, int column)
         {
             if (row < 0 || row >= BoardRows)
                 throw new ArgumentOutOfRangeException("row");
@@ -112,7 +112,7 @@ namespace reseauxClient
 
             return cells[row, column];
         }
-       
+
         public bool MakePlay(ActivePlayer player, int column, out Board board)
         {
             if (column < 0 || column >= BoardColumns) throw new ArgumentOutOfRangeException("column");
@@ -210,12 +210,12 @@ namespace reseauxClient
 
             }
             Console.WriteLine(" it's user 's turn and his next color will be {0}", "" + mypick[1]);
-            if (Getpack()!=null)builder.Append(Getpack());
-           
+            if (Getpack() != null) builder.Append(Getpack());
+
             return builder.ToString(0, builder.Length - 1);
         }
     }
-   
+
     public enum CellStates
     {
         Empty = 0,
