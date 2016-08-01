@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reseauxClient", "reseauxClient\reseauxClient.csproj", "{CA89DA34-4076-4657-99A6-C5E9AE6EB08B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reseauxserveur", "..\reseauxserveur\reseauxserveur\reseauxserveur.csproj", "{87597D2C-AFCA-4C7A-849C-5952AC629A44}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -17,10 +15,6 @@ Global
 		{CA89DA34-4076-4657-99A6-C5E9AE6EB08B}.Debug|x86.Build.0 = Debug|x86
 		{CA89DA34-4076-4657-99A6-C5E9AE6EB08B}.Release|x86.ActiveCfg = Release|x86
 		{CA89DA34-4076-4657-99A6-C5E9AE6EB08B}.Release|x86.Build.0 = Release|x86
-		{87597D2C-AFCA-4C7A-849C-5952AC629A44}.Debug|x86.ActiveCfg = Debug|x86
-		{87597D2C-AFCA-4C7A-849C-5952AC629A44}.Debug|x86.Build.0 = Debug|x86
-		{87597D2C-AFCA-4C7A-849C-5952AC629A44}.Release|x86.ActiveCfg = Release|x86
-		{87597D2C-AFCA-4C7A-849C-5952AC629A44}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
