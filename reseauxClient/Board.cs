@@ -210,7 +210,7 @@ namespace reseauxClient
 
             }
             Console.WriteLine(" it's user 's turn and his next color will be {0}", "" + mypick[1]);
-            if (Getpack() != null) builder.Append(Getpack());
+            //if (Getpack() != null) builder.Append(Getpack());
 
             return builder.ToString(0, builder.Length - 1);
         }

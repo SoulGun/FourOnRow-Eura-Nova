@@ -2,6 +2,10 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
 
 namespace reseauxClient
 {
@@ -20,7 +24,7 @@ namespace reseauxClient
 
         private readonly ActivePlayer playerStatus;
         private readonly IODevice iODevice;
-
+        public static CellStates[,] cells;
         private Player(ActivePlayer colorJugador, IODevice iODevice)
         {
             if (colorJugador != ActivePlayer.Player && colorJugador != ActivePlayer.User)
@@ -46,7 +50,7 @@ namespace reseauxClient
             {
                 engine = new AIEngine(difficulty);
             }
-
+           
             public override int RequestMove(Board board)
             {
                 Debug.Assert(board != null);
@@ -79,7 +83,7 @@ namespace reseauxClient
             public HumanConsolePlayer(ActivePlayer color, IODevice iOdevice)
                 : base(color, iOdevice)
             { }
-
+           
             public override int RequestMove(Board tablero)
             {
                 Debug.Assert(tablero != null);
@@ -99,6 +103,7 @@ namespace reseauxClient
                         }
                         else
                         {
+                            
                             return jugada;
                         }
                     }

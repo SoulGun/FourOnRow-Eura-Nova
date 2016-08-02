@@ -212,24 +212,25 @@ namespace reseauxClient
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                //Console.WriteLine(ex.Message);
                 Console.ReadKey();
             }
-
 
 
         }
         static void Main(string[] args)
         {
 
-            RecevingData();
-
-
+            do
+            {
+                RecevingData();
+                Console.ReadKey(); 
+            } while (true);
 
 
 
         }
-       
+
     }
 
    
